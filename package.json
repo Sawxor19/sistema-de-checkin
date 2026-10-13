@@ -1,0 +1,19 @@
+{
+  "name": "sistema-de-checkin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Check-in hospitalar com NestJS, React, totem e fila em memória",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "setup": "node scripts/install.mjs",
+    "dev": "node scripts/dev.mjs",
+    "dev:demo": "node scripts/dev.mjs --demo",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "build:pages": "node scripts/build-pages.mjs",
+    "lint": "npm run lint --prefix backend && npm run lint --prefix frontend",
+    "test": "npm run test --prefix backend -- --runInBand && npm run test:e2e --prefix backend -- --runInBand",
+    "test:ui": "npm run build:pages && playwright test",
+    "check": "npm run lint && npm run test && npm run build"
+  },
+  "devDependencies": { "@playwright/test": "1.64.0" }
+}

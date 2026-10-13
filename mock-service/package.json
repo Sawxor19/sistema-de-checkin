@@ -1,0 +1,12 @@
+{
+  "name": "mock-service-cadastro",
+  "version": "1.0.0",
+  "description": "Serviço externo (mock) de cadastro de pacientes para o desafio técnico",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

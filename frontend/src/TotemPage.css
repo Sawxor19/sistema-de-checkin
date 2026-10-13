@@ -1,0 +1,438 @@
+.totem-app {
+  min-height: 100svh;
+  background:
+    radial-gradient(ellipse at 5% 70%, #dff2ef, transparent 50%), #f5f9f9;
+  color: #203f45;
+}
+.totem-header {
+  padding: 12px max(30px, calc((100vw - 1150px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: #faffff;
+  border-bottom: 1px solid #e0ebeb;
+}
+.totem-brand {
+  display: block;
+  width: 160px;
+  flex-shrink: 0;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.totem-logo-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 700 / 405;
+  overflow: hidden;
+  position: relative;
+}
+.totem-logo-frame img {
+  position: absolute;
+  width: 182.86%;
+  max-width: none;
+  height: auto;
+  left: -39.286%;
+  top: -37.037%;
+}
+.totem-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.totem-header-actions > span {
+  color: #527477;
+  font-size: 10px;
+  letter-spacing: 1.6px;
+}
+.totem-queue-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  border-radius: 8px;
+  border: 1px solid #d6e7e3;
+  color: #006e75;
+  text-decoration: none;
+  font-size: 12px;
+  background: white;
+}
+.totem-queue-link:hover {
+  background: #e7f4f0;
+}
+.totem-queue-link svg {
+  width: 16px;
+  height: 16px;
+}
+.totem-main {
+  max-width: 1130px;
+  margin: 30px auto 40px;
+  padding: 0 35px;
+  display: grid;
+  grid-template-columns: 1fr 470px;
+  gap: 70px;
+  align-items: center;
+}
+.totem-eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #527477;
+  font-weight: 600;
+}
+.totem-intro h1 {
+  font-size: clamp(38px, 4.5vw, 59px);
+  line-height: 1.18;
+  letter-spacing: -2.6px;
+  margin: 22px 0;
+  font-weight: 700;
+}
+.totem-intro h1 span {
+  color: #008c87;
+}
+.totem-intro > p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #587276;
+}
+.totem-instructions {
+  display: grid;
+  gap: 19px;
+  margin: 42px 0;
+}
+.totem-instructions span {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 15px;
+  font-weight: 550;
+}
+.totem-instructions b {
+  border: 1px solid #b7d8d4;
+  color: #007973;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+}
+.totem-intro .totem-help {
+  font-size: 12px;
+}
+.totem-intro .totem-memory-note {
+  font-size: 11px;
+  margin-top: 16px;
+  max-width: 350px;
+  color: #607e7c;
+}
+.totem-card {
+  background: white;
+  border: 1px solid #e2ebea;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 15px 50px #1b56500a;
+}
+.totem-card-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 9px;
+  letter-spacing: 1.1px;
+  color: #759394;
+}
+.totem-card h2 {
+  font-size: 26px;
+  letter-spacing: -0.9px;
+  margin: 16px 0 22px;
+  font-weight: 650;
+}
+.totem-card label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #527477;
+}
+.totem-cpf {
+  width: 100%;
+  padding: 18px 10px;
+  font-size: 27px;
+  text-align: center;
+  color: #203f45;
+  border: 1px solid #c9ddda;
+  border-radius: 12px;
+  background: #f8fbfa;
+  font-weight: 550;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.6px;
+}
+.totem-cpf::placeholder {
+  color: #9aaeb0;
+}
+.totem-cpf:focus {
+  border-color: #00918b;
+  box-shadow: 0 0 0 3px #00918b18;
+}
+.totem-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 22px 0;
+}
+.totem-keypad button {
+  background: #f3f7f7;
+  border: 1px solid #e5eceb;
+  border-radius: 11px;
+  height: 61px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  color: #294c51;
+  touch-action: manipulation;
+}
+.totem-keypad button:hover:not(:disabled) {
+  background: #e3f2ef;
+  border-color: #a6cfca;
+}
+.totem-keypad button:active:not(:disabled) {
+  background: #cfe9e4;
+}
+.totem-keypad button:nth-last-child(3) {
+  font-size: 13px;
+}
+.totem-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 57px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #007d7b;
+  color: white;
+  width: 100%;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 9px;
+}
+.totem-primary:hover:not(:disabled) {
+  background: #006d6b;
+}
+.totem-guidance {
+  text-align: center;
+  font-size: 11px;
+  color: #6c8385;
+  margin-top: 17px;
+  line-height: 1.7;
+}
+.totem-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  max-width: 1130px;
+  padding: 0 35px 25px;
+  margin: auto;
+  font-size: 11px;
+  color: #6c8385;
+}
+.totem-success {
+  text-align: center;
+  padding: 25px 0;
+}
+.totem-success-circle {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #e0f5ed;
+  color: #007973;
+  margin: auto;
+}
+.totem-success-circle svg {
+  width: 32px;
+  height: 32px;
+}
+.totem-success h2 {
+  margin-bottom: 10px;
+}
+.totem-success > p {
+  color: #6c8385;
+  font-size: 14px;
+}
+.totem-patient-name {
+  font-size: 35px;
+  color: #007d7b;
+  display: block;
+  letter-spacing: -1px;
+  margin: 18px 0;
+  overflow-wrap: anywhere;
+}
+.totem-arrival-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #587276;
+  font-size: 13px;
+}
+.totem-arrival-time svg {
+  width: 16px;
+  height: 16px;
+}
+.totem-directions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  background: #eff8f5;
+  padding: 18px;
+  border-radius: 12px;
+  line-height: 1.8;
+  font-size: 14px;
+  margin: 20px 0 28px;
+}
+.totem-success > small {
+  display: block;
+  color: #6c8385;
+  margin-top: 18px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.totem-view-queue {
+  display: inline-block;
+  color: #006e75;
+  font-size: 13px;
+  text-underline-offset: 4px;
+  margin-top: 18px;
+}
+.totem-error {
+  background: #fff1ee;
+  border-radius: 8px;
+  color: #a53635;
+  padding: 12px;
+  margin: -4px 0 18px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.totem-back-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #007b78;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.totem-brand:focus-visible,
+.totem-queue-link:focus-visible,
+.totem-view-queue:focus-visible,
+.totem-back-link:focus-visible {
+  outline: 3px solid #18ada2;
+  outline-offset: 4px;
+}
+@media (max-width: 1100px) {
+  .totem-main {
+    gap: 35px;
+    grid-template-columns: 1fr 420px;
+  }
+}
+@media (max-height: 800px) and (min-width: 801px) {
+  .totem-header {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .totem-brand {
+    width: 135px;
+    padding: 6px 10px;
+  }
+  .totem-main {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  .totem-card {
+    padding: 24px;
+  }
+  .totem-card h2 {
+    margin: 12px 0 18px;
+    font-size: 24px;
+  }
+  .totem-cpf {
+    padding: 14px 10px;
+  }
+  .totem-keypad {
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .totem-keypad button {
+    height: 48px;
+  }
+  .totem-primary {
+    min-height: 48px;
+  }
+  .totem-instructions {
+    margin: 28px 0;
+  }
+  .totem-footer {
+    padding-bottom: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .totem-main {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin-top: 20px;
+    gap: 26px;
+  }
+  .totem-intro {
+    text-align: center;
+  }
+  .totem-intro h1 {
+    font-size: 38px;
+    letter-spacing: -1.7px;
+  }
+  .totem-intro > p {
+    font-size: 14px;
+  }
+  .totem-instructions {
+    display: none;
+  }
+  .totem-intro .totem-help {
+    margin-top: 12px;
+  }
+  .totem-intro .totem-memory-note {
+    margin: 12px auto 0;
+  }
+}
+@media (max-width: 600px) {
+  .totem-header {
+    padding: 8px 20px;
+  }
+  .totem-brand {
+    width: 135px;
+    padding: 6px 10px;
+  }
+  .totem-header-actions > span {
+    display: none;
+  }
+  .totem-main {
+    padding: 0 20px;
+    gap: 20px;
+  }
+  .totem-intro h1 {
+    font-size: 34px;
+  }
+  .totem-card {
+    padding: 24px;
+  }
+  .totem-cpf {
+    font-size: 23px;
+  }
+  .totem-keypad button {
+    height: 56px;
+  }
+  .totem-footer {
+    padding: 0 20px 20px;
+    flex-direction: column;
+    font-size: 10px;
+  }
+}
